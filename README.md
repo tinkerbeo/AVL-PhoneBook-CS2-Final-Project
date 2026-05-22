@@ -24,7 +24,7 @@ A Java Swing desktop application that functions as a phonebook while visually de
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/avl-phonebook.git](https://github.com/tinkerbeo/AVL-PhoneBook-CS2-Final-Project.git
+    git clone https://github.com/tinkerbeo/AVL-PhoneBook-CS2-Final-Project.git
     cd avl-phonebook
     ```
 2.  **Compile the code:**
