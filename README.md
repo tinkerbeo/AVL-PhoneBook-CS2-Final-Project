@@ -3,6 +3,8 @@
 ## 1. Overview
 
 The **AVL Tree Phonebook** is a Java Swing desktop application that manages your contacts while visually demonstrating how a self-balancing AVL Tree works in real-time. As you add, delete, or search for contacts, you can watch the tree automatically rotate and balance itself with smooth animations.
+
+
 <img width="1239" height="831" alt="avlphonebook" src="https://github.com/user-attachments/assets/545dff5c-e934-4d7e-b548-33172df10675" />
 
 ---
