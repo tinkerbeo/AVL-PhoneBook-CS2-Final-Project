@@ -1,49 +1,79 @@
-# 🌳 AVL Tree Phonebook Visualizer
+🌳 AVL Tree Phonebook: User & Installation Guide
+1. Overview
+The AVL Tree Phonebook is a Java Swing desktop application that manages your contacts while visually demonstrating how a self-balancing AVL Tree works in real-time. As you add, delete, or search for contacts, you can watch the tree automatically rotate and balance itself with smooth animations.
 
-A Java Swing desktop application that functions as a phonebook while visually demonstrating the mechanics of a self-balancing AVL Tree in real-time! 
+2. Installation & Setup
+Prerequisites
+Java Development Kit (JDK): Ensure you have Java 11 or higher installed on your computer. You can verify this by opening your terminal and typing java -version.
 
-## ✨ Features
+Step-by-Step Installation
+Download the Source Code: Clone this repository or download the ZIP file and extract it to your computer.
 
-* **Self-Balancing Logic:** Automatically performs Left, Right, Left-Right, and Right-Left rotations to maintain optimal $O(\log n)$ search times.
-* **Smooth Animations:** 60fps visual easing when nodes move, insert, or rotate.
-* **Color-Coded Balance Factors (BF):**
-    * 🟦 **Blue:** Perfect balance ($BF = 0$).
-    * 🟨 **Yellow:** Slight imbalance ($BF = \pm 1$).
-    * 🟥 **Red:** Critical imbalance ($BF > 1$ or $BF < -1$, triggers rotation).
-    * 🟩 **Green:** Highlighted search path.
-* **Time Travel (Undo/Redo):** Complete deep-state cloning allows you to undo/redo operations flawlessly without breaking the visual structure.
-* **Persistent Storage:** Automatically reads and writes contacts to a local `phonebook.csv` file.
+Bash
+git clone https://github.com/your-username/avl-phonebook.git
+cd avl-phonebook
+Folder Structure Check:
+Ensure your source code is located inside the src1/phonebookavl/ directory.
 
-## 🛠️ Tech Stack
+Compile the Application:
+Open your terminal (or PowerShell), navigate to the root folder of the project, and run the following command to compile the Java files into a new bin folder:
 
-* **Language:** Java
-* **GUI Framework:** Java Swing / AWT
-* **Core Concepts:** Binary Search Trees, AVL Rotations, Recursion, Graphics2D Animations, Stacks/Queues (Undo/Redo History).
+Bash
+javac -d bin src1/phonebookavl/*.java
+Run the Application:
+Once compiled successfully, launch the app using:
 
-## 🚀 How to Run
+Bash
+java -cp bin phonebookavl.PhonebookApp
+3. How to Use the Application
+When you launch the app, you will see a sidebar on the left for controls and a large canvas on the right where the AVL Tree is visualized.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/tinkerbeo/AVL-PhoneBook-CS2-Final-Project.git
-    cd avl-phonebook
-    ```
-2.  **Compile the code:**
-    ```bash
-    javac -d bin src1/phonebookavl/*.java
-    ```
-3.  **Run the application:**
-    ```bash
-    java -cp bin phonebookavl.PhonebookApp
-    ```
+👤 Adding or Updating a Contact
+Type a name into the "Tên liên hệ" (Contact Name) field.
 
-## 📂 Project Structure
+Type a phone number into the "Số điện thoại" (Phone Number) field.
 
-* `PhonebookApp.java`: Main window, layout setup, and UI controller.
-* `TreePanel.java`: The visual canvas handling Graphics2D drawing, math targeting, and 60fps easing animations.
-* `AVLTree.java`: The algorithmic brain managing tree balancing, heights, and rotations.
-* `Node.java`: The basic building block representing a tree node.
-* `Contact.java`: The data payload storing a name and phone number.
-* `PhonebookStorage.java`: The static file-handler parsing and saving `phonebook.csv`.
+Click "Thêm / Cập nhật".
 
-## 🤝 Contributing
-Feel free to open issues or submit pull requests for additional features (like zoom/pan controls or editing contact details in place)!
+Note: If the name already exists, the app will update their phone number instead of creating a duplicate.
+
+Watch the canvas as the new node drops in and the tree re-balances itself!
+
+🗑️ Deleting a Contact
+Type the name of the contact you want to remove in the Name field.
+
+Click "Xóa theo tên".
+
+The node will disappear, and the tree will smoothly glide to close the gap.
+
+🔍 Searching for a Contact
+Type a name into the "Tìm kiếm tên" (Search Name) field.
+
+Click "Search + Highlight Path".
+
+The app will visually trace the exact path it took through the binary search tree to find your contact, turning those specific nodes Green.
+
+To remove the search path colors, click "Bỏ highlight".
+
+⏪ Time Travel: Undo & Redo
+Made a mistake? The app records a deep-history snapshot of your tree.
+
+Click "Undo" to instantly revert the tree back to its previous state and shape.
+
+Click "Redo" to step forward again.
+
+💾 Saving and Loading (CSV)
+Lưu CSV (Save): Click this to save your current contacts to a local phonebook.csv file. (Note: The app also auto-saves quietly in the background after major actions).
+
+Đọc CSV (Load): Click this to import contacts from your phonebook.csv file and watch the tree build itself.
+
+4. Understanding the Visualizer (Color Guide)
+The right side of the screen isn't just a static picture—it's a live mathematical model. The nodes change color to teach you about their Balance Factor (BF).
+
+🟦 Blue (Perfect Balance): The node has a Balance Factor of 0. Both its left and right branches are the exact same height.
+
+🟨 Yellow (Slight Imbalance): The node has a Balance Factor of 1 or -1. One branch is slightly taller than the other, but it is still within safe AVL limits.
+
+🟥 Red (Critical Imbalance): The node's Balance Factor has exceeded ±1. When a node turns red, the tree will instantly perform a Left or Right Rotation to fix it.
+
+🟩 Green (Search Path): This color highlights the exact route the search algorithm took to find a specific contact.
