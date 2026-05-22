@@ -20,7 +20,7 @@ The **AVL Tree Phonebook** is a Java Swing desktop application that manages your
 1. **Download the Source Code:** Clone this repository or download the ZIP file and extract it to your computer.
 ```bash
 git clone https://github.com/tinkerbeo/AVL-PhoneBook-CS2-Final-Project.git
-cd avl-phonebook
+cd AVL-PhoneBook-CS2-Final-Project
 
 ```
 
