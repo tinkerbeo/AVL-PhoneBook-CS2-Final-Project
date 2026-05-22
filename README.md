@@ -1,4 +1,4 @@
-# 🌳 AVL Tree Phonebook: User & Installation Guide
+# AVL Tree Phonebook: User & Installation Guide 🌳
 
 ## 1. Overview
 
@@ -50,7 +50,7 @@ java -cp bin phonebookavl.PhonebookApp
 
 When you launch the app, you will see a sidebar on the left for controls and a large canvas on the right where the AVL Tree is visualized.
 
-### 👤 Adding or Updating a Contact
+### Adding or Updating a Contact
 
 1. Type a name into the **"Tên liên hệ"** (Contact Name) field.
 2. Type a phone number into the **"Số điện thoại"** (Phone Number) field.
@@ -60,20 +60,20 @@ When you launch the app, you will see a sidebar on the left for controls and a l
 
 
 
-### 🗑️ Deleting a Contact
+### Deleting a Contact
 
 1. Type the name of the contact you want to remove in the Name field.
 2. Click **"Xóa theo tên"**.
 3. The node will disappear, and the tree will smoothly glide to close the gap.
 
-### 🔍 Searching for a Contact
+### Searching for a Contact
 
 1. Type a name into the **"Tìm kiếm tên"** (Search Name) field.
 2. Click **"Search + Highlight Path"**.
 3. The app will visually trace the exact path it took through the binary search tree to find your contact, turning those specific nodes **Green**.
 4. To remove the search path colors, click **"Bỏ highlight"**.
 
-### ⏪ Time Travel: Undo & Redo
+### Time Travel: Undo & Redo
 
 Made a mistake? The app records a deep-history snapshot of your tree.
 
