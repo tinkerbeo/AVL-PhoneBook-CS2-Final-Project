@@ -1,4 +1,4 @@
-# AVL Tree Phonebook: User & Installation Guide 🌳
+#  🌳☎️ AVL Tree Phonebook: User & Installation Guide
 
 ## 1. Overview
 
@@ -80,7 +80,7 @@ Made a mistake? The app records a deep-history snapshot of your tree.
 * Click **"Undo"** to instantly revert the tree back to its previous state and shape.
 * Click **"Redo"** to step forward again.
 
-### 💾 Saving and Loading (CSV)
+### Saving and Loading (CSV)
 
 * **Lưu CSV (Save):** Click this to save your current contacts to a local `phonebook.csv` file. *(Note: The app also auto-saves quietly in the background after major actions).*
 * **Đọc CSV (Load):** Click this to import contacts from your `phonebook.csv` file and watch the tree build itself.
